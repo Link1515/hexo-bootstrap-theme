@@ -1,1 +1,57 @@
-this is home page
+<div class="home my-5">
+  <% page.posts.forEach(post => { %>
+  <div class="card-post card mb-3">
+    <div class="row g-0 h-100">
+      <a href="<%= post.permalink %>" class="col-md-4 h-100">
+        <img
+          src="<%= post.cover %>"
+          class="img-fluid rounded-start w-100 h-100 object-fit-cover"
+          alt="cover"
+        />
+      </a>
+      <div class="col-md-8">
+        <div class="card-body h-100 d-flex flex-column">
+          <h5 class="card-title">
+            <a href="<%= post.permalink %>"><%= post.title %></a>
+          </h5>
+          <div class="card-text mb-3 d-flex flex-wrap gap-2">
+            <% post.categories.forEach(category => { %>
+            <a
+              href="<%= category.permalink %>"
+              class="badge text-bg-primary link-underline link-underline-opacity-0"
+            >
+              <%= category.name %>
+            </a>
+            <% }) %>
+          </div>
+          <p class="card-text mb-auto"><%= post.excerpt %></p>
+          <div class="card-text mb-1 d-flex flex-wrap gap-2">
+            <% post.tags.forEach(tag => { %>
+            <a href="<%= tag.permalink %>" class="link-body-emphasis">
+              #<%= tag.name %>
+            </a>
+            <% }) %>
+          </div>
+          <p class="card-text">
+            <small class="text-body-secondary">
+              <time datetime="<%= post.date.toISOString() %>">
+                <%= post.date.format('YYYY-MM-DD') %>
+              </time>
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+
+  <!--  -->
+
+  <%- partial('partials/pagination') %>
+</div>
+
+<style>
+  .home .card-post {
+    height: 300px;
+  }
+</style>
