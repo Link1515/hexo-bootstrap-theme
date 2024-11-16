@@ -1,0 +1,35 @@
+<nav class="mt-5">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a
+        class="page-link <%= page.prev === 0 ? 'disabled' : '' %>"
+        href="<%= page.prev_link %>"
+      >
+        <span>&laquo;</span>
+      </a>
+    </li>
+    <% if (page.prev !== 0) { %>
+    <li class="page-item">
+      <a class="page-link" href="<%= page.prev_link %>"><%= page.prev %></a>
+    </li>
+    <% } %>
+    <li class="page-item active">
+      <a class="page-link" href="<%= page.current_link %>"
+        ><%= page.current %></a
+      >
+    </li>
+    <% if (page.next !== 0) { %>
+    <li class="page-item">
+      <a class="page-link" href="<%= page.next_link %>"><%= page.next %></a>
+    </li>
+    <% } %>
+    <li class="page-item">
+      <a
+        class="page-link <%= page.next === 0 ? 'disabled' : '' %>"
+        href="<%= page.next_link %>"
+      >
+        <span>&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
