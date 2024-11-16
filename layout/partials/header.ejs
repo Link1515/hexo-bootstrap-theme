@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="<%= config.url %>">
+      <% if (config.logo_image) { %>
+      <img class="me-1" src="<%= config.logo_image %>" height="50" alt="logo" />
+      <% } %>
+      <!--  -->
+      <%= config.logo_title %>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">首頁</a>
+        </li>
+        <% if (site.categories.length > 0) { %>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+          >
+            文章分類
+          </a>
+          <ul class="dropdown-menu">
+            <% site.categories.each(function(category){ %>
+            <li>
+              <a class="dropdown-item" href="<%= category.path %>">
+                <%= category.name %> (<%= category.length %>)
+              </a>
+            </li>
+            <% }) %>
+          </ul>
+        </li>
+        <% } %>
+      </ul>
+
+      <form class="d-flex ms-lg-3">
+        <input class="form-control me-2" type="search" placeholder="搜尋" />
+        <button class="btn btn-outline-success flex-shrink-0" type="submit">
+          搜尋
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
