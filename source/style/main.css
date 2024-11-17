@@ -1,0 +1,8 @@
+code {
+  font-size: 18px !important;
+}
+
+.code-toolbar .toolbar {
+  display: flex;
+  gap: 8px;
+}

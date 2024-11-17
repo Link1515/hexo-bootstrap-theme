@@ -1,0 +1,7 @@
+# copy to _config.yml in the root
+syntax_highlighter: prismjs
+prismjs:
+  preprocess: false
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
