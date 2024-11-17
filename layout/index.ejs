@@ -15,11 +15,12 @@
             <a href="<%= post.permalink %>"><%= post.title %></a>
           </h5>
           <div class="card-text mb-3">
-            <%- partial('partials/categories', { post }) %>
+            <%- partial('partials/categories', { categories: post.categories })
+            %>
           </div>
           <p class="card-text mb-auto"><%= post.excerpt %></p>
           <div class="card-text mb-1">
-            <%- partial('partials/tags', { post }) %>
+            <%- partial('partials/tags', { tags: post.tags }) %>
           </div>
           <p class="card-text">
             <small class="text-body-secondary">
