@@ -1,0 +1,10 @@
+<div class="d-flex flex-wrap gap-2">
+  <% post.categories.forEach(category => { %>
+  <a
+    href="<%= category.permalink %>"
+    class="badge text-bg-primary link-underline link-underline-opacity-0"
+  >
+    <%= category.name %>
+  </a>
+  <% }) %>
+</div>
