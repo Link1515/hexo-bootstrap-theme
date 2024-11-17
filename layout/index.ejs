@@ -18,12 +18,8 @@
             <%- partial('partials/categories', { post }) %>
           </div>
           <p class="card-text mb-auto"><%= post.excerpt %></p>
-          <div class="card-text mb-1 d-flex flex-wrap gap-2">
-            <% post.tags.forEach(tag => { %>
-            <a href="<%= tag.permalink %>" class="link-body-emphasis">
-              #<%= tag.name %>
-            </a>
-            <% }) %>
+          <div class="card-text mb-1">
+            <%- partial('partials/tags', { post }) %>
           </div>
           <p class="card-text">
             <small class="text-body-secondary">
