@@ -1,0 +1,15 @@
+<div class="page">
+  <h1 class="mb-4"><%= page.title %></h1>
+  <div class="page-content"><%- page.content %></div>
+</div>
+
+<style>
+  .page .page-content h2::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: var(--bs-body-color);
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+</style>
