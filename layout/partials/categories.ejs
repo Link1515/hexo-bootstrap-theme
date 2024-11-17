@@ -2,7 +2,12 @@
   <% categories.forEach(category => { %>
   <a
     href="<%= category.permalink %>"
-    class="badge text-bg-primary link-underline link-underline-opacity-0"
+    class="btn btn-primary btn-sm"
+    style="
+      --bs-btn-padding-y: 0.1rem;
+      --bs-btn-padding-x: 0.4rem;
+      --bs-btn-font-size: 0.75rem;
+    "
   >
     <%= category.name %>
   </a>
