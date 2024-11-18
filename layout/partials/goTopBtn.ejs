@@ -1,0 +1,29 @@
+<button id="goTopBtn" class="goTopBtn shadow-sm">
+  <i class="bi bi-chevron-up"></i>
+</button>
+
+<script>
+const goTopBtnEl = document.querySelector('#goTopBtn')
+goTopBtnEl.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+})
+</script>
+
+<style>
+  .goTopBtn {
+    all: unset;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    border-radius: 50%;
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    background: var(--bs-tertiary-bg);
+  }
+</style>
