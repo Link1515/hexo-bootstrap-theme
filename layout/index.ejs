@@ -1,52 +1,8 @@
-<div class="home">
+<div>
   <% page.posts.sort('date', 'desc').forEach(post => { %>
-  <div class="card-post card mb-3">
-    <div class="row g-0 h-100">
-      <% if (post.cover) { %>
-      <a href="<%= post.permalink %>" class="col-md-4 h-100">
-        <img
-          src="<%= post.cover %>"
-          class="rounded-start w-100 h-100 object-fit-cover"
-          alt="cover"
-        />
-      </a>
-      <% } %>
-
-      <div class="<%= post.cover ? 'col-md-8' : 'col-md-12' %>">
-        <div class="card-body h-100 d-flex flex-column">
-          <h5 class="card-title">
-            <a href="<%= post.permalink %>"><%= post.title %></a>
-          </h5>
-          <div class="card-text mb-3">
-            <%- partial('partials/categories', { categories: post.categories })
-            %>
-          </div>
-          <p class="card-text mb-auto"><%= post.excerpt %></p>
-          <div class="card-text mb-1">
-            <%- partial('partials/tags', { tags: post.tags }) %>
-          </div>
-          <p class="card-text">
-            <small class="text-body-secondary">
-              <time datetime="<%= post.date.toISOString() %>">
-                <%= post.date.format('YYYY-MM-DD') %>
-              </time>
-            </small>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <%- partial('partials/post/card', { post }) %>
   <% }) %>
-
-  <!--  -->
 
   <%- partial('partials/pagination') %>
 </div>
 
-<style>
-  @media (min-width: 768px) {
-    .home .card-post {
-      height: 300px;
-    }
-  }
-</style>
