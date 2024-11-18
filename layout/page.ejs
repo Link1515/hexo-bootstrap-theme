@@ -1,25 +1,4 @@
 <div class="page">
   <h1 class="mb-4"><%= page.title %></h1>
-  <div class="page-content"><%- page.content %></div>
+  <div class="content"><%- page.content %></div>
 </div>
-
-<style>
-  .page .page-content h2::after {
-    content: '';
-    display: block;
-    height: 1px;
-    margin-top: 6px;
-    margin-bottom: 18px;
-    color: inherit;
-    border: 0;
-    border-top: var(--bs-border-width) solid;
-    opacity: 0.25;
-  }
-
-  .page .page-content img {
-    max-width: 100%;
-    display: block;
-    margin: auto;
-    padding: 1.5rem 0;
-  }
-</style>
