@@ -1,5 +1,11 @@
-.container {
-  --bs-gutter-x: 4rem;
+@media (min-width: 768px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    --bs-gutter-x: 4rem;
+  }
 }
 
 code {

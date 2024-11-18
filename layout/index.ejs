@@ -2,14 +2,17 @@
   <% page.posts.forEach(post => { %>
   <div class="card-post card mb-3">
     <div class="row g-0 h-100">
+      <% if (post.cover) { %>
       <a href="<%= post.permalink %>" class="col-md-4 h-100">
         <img
           src="<%= post.cover %>"
-          class="img-fluid rounded-start w-100 h-100 object-fit-cover"
+          class="rounded-start w-100 h-100 object-fit-cover"
           alt="cover"
         />
       </a>
-      <div class="col-md-8">
+      <% } %>
+
+      <div class="<%= post.cover ? 'col-md-8' : 'col-md-12' %>">
         <div class="card-body h-100 d-flex flex-column">
           <h5 class="card-title">
             <a href="<%= post.permalink %>"><%= post.title %></a>
@@ -41,7 +44,9 @@
 </div>
 
 <style>
-  .home .card-post {
-    height: 300px;
+  @media (min-width: 768px) {
+    .home .card-post {
+      height: 300px;
+    }
   }
 </style>

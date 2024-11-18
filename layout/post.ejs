@@ -1,7 +1,16 @@
 <div class="post">
+  <% if (page.cover) { %>
   <div class="text-center mb-4">
-    <img src="<%= page.cover %>" alt="cover" />
+    <img
+      class="img-fluid rounded"
+      width="1200"
+      height="630"
+      src="<%= page.cover %>"
+      alt="cover"
+    />
   </div>
+  <% } %>
+
   <h1><%= page.title %></h1>
 
   <div class="mb-3">
