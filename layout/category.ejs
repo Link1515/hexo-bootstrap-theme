@@ -1,6 +1,7 @@
+<h1><%= page.category %></h1>
+
 <% page.posts.sort('date', 'desc').forEach(post => { %>
   <%- partial('partials/post/card', { post }) %>
 <% }) %>
 
 <%- partial('partials/pagination') %>
-
