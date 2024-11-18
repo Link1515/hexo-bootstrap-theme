@@ -1,5 +1,5 @@
 <div class="home">
-  <% page.posts.forEach(post => { %>
+  <% page.posts.sort('date', 'desc').forEach(post => { %>
   <div class="card-post card mb-3">
     <div class="row g-0 h-100">
       <% if (post.cover) { %>
