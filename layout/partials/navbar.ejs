@@ -34,23 +34,13 @@
           </a>
         </li>
         <% if (site.categories.length > 0) { %>
-        <li class="nav-item dropdown">
+        <li class="nav-item">
           <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            data-bs-toggle="dropdown"
+            class="nav-link <%= path.includes('categories/') ? 'active' : '' %>"
+            href="<%= full_url_for('categories') %>"
           >
             文章分類
           </a>
-          <ul class="dropdown-menu">
-            <% site.categories.each(function(category){ %>
-            <li>
-              <a class="dropdown-item" href="<%= category.permalink %>">
-                <%= category.name %> (<%= category.length %>)
-              </a>
-            </li>
-            <% }) %>
-          </ul>
         </li>
         <% } %>
         <li class="nav-item">

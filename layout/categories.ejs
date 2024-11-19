@@ -1,0 +1,14 @@
+<div class="d-flex flex-wrap gap-3">
+  <% site.categories.each(function(category) { %>
+  <a
+    href="<%= category.permalink %>"
+    class="btn btn-secondary"
+  >
+    <i class="bi bi-folder-fill"></i>
+    <span class="mx-1"><%= category.name %></span>
+    <span class="badge text-bg-danger">
+      <%= category.length %>
+    </span>
+  </a>
+  <% }) %>
+</div>
