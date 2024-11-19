@@ -1,10 +1,10 @@
 <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
   <div class="container-lg">
     <a class="navbar-brand" href="<%= config.url %>">
-      <% if (config.logo_image) { %>
-      <img class="me-1" src="<%= config.logo_image %>" height="50" alt="logo" />
+      <% if (theme.logo.image) { %>
+      <img class="me-1" src="<%= theme.logo_image %>" height="50" alt="logo" />
       <% } %>
-      <%= config.logo_title %>
+      <%= theme.logo.title %>
     </a>
     <button
       class="navbar-toggler px-2"
