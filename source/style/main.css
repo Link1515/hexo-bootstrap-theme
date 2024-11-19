@@ -17,6 +17,11 @@ code {
   gap: 8px;
 }
 
+.pagination {
+  --bs-pagination-active-bg: var(--bs-gray-600);
+  --bs-pagination-active-border-color: var(--bs-gray-600);
+}
+
 .content h2::after {
   content: '';
   display: block;
