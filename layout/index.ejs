@@ -1,5 +1,5 @@
 <% page.posts.sort('date', 'desc').forEach(post => { %>
-  <%- partial('partials/post/card', { post }) %>
+  <%- partial('partials/postCard', { post }) %>
 <% }) %>
 
 <%- partial('partials/pagination') %>
