@@ -15,14 +15,14 @@
     <div class="<%= post.cover ? 'col-md-8' : 'col-md-12' %>">
       <div class="card-body h-100 d-flex flex-column">
         <h5 class="card-title">
-          <a href="<%= post.permalink %>"><%= post.title %></a>
+          <a href="<%= post.permalink %>" class="link-offset-1"><%= post.title %></a>
         </h5>
         <div class="card-text mb-3">
           <%- partial('partials/categories', { categories: post.categories })
           %>
         </div>
-        <p class="card-text mb-auto"><%= post.excerpt %></p>
-        <div class="card-text mb-1">
+        <p class="excerpt card-text"><%= post.excerpt %></p>
+        <div class="card-text mb-1 mt-auto">
           <%- partial('partials/tags', { tags: post.tags }) %>
         </div>
         <p class="card-text">
@@ -41,6 +41,14 @@
   .post-card img {
     border-top-right-radius: var(--bs-border-radius) !important;
     border-top-left-radius: var(--bs-border-radius) !important;
+  }
+
+  .post-card .excerpt {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    -webkit-line-clamp: 3;
   }
 
   @media (min-width: 768px) {
