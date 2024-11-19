@@ -22,6 +22,16 @@ code {
   --bs-pagination-active-border-color: var(--bs-gray-600);
 }
 
+.form-control:focus {
+  border-color: #86b7fe;
+  border-color: var(--bs-gray-400);
+  box-shadow: 0 0 0 .25rem var(--bs-gray-400);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 .25rem var(--bs-gray-400);
+}
+
 .btn-sm {
   --bs-btn-padding-y: 0.1rem;
   --bs-btn-padding-x: 0.4rem;
