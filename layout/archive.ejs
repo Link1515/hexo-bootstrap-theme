@@ -16,7 +16,7 @@ const sortedYears = page.year ?
 <div class="archive">
   <% for (const year of sortedYears) { %>
   <h3>
-    <a href="<%= url_for(`/archives/${year}`) %>" class="link-body-emphasis">
+    <a href="<%= full_url_for(`/archives/${year}`) %>" class="link-body-emphasis">
       <%= year %>
     </a>
   </h3>
