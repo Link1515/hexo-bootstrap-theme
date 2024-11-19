@@ -1,0 +1,44 @@
+<div class="modal fade" id="searchModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="position-relative mb-2">
+          <input id="searchInput" class="form-control" type="search" style="padding-left: 2.25rem;"/>
+          <span class="position-absolute top-50 translate-middle-y search-icon" style="left: 0.75rem;">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+        <ul id="searchResults" class="list-group list-group-flush"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div 
+  id="postTitles" 
+  data-post-titles="<%= JSON.stringify(site.posts.map(post => ({title: post.title, link: post.permalink}))) %>"></div>
+
+<script>
+  window.addEventListener("load", () => {
+    const searchInputEl = document.querySelector("#searchInput");
+    const searchResultsEl = document.querySelector("#searchResults");
+    const postTitlesEl = document.querySelector("#postTitles");
+    const postTitles = JSON.parse(postTitlesEl.dataset.postTitles) || [];
+
+    const fuse = new window.Fuse(postTitles, { keys: ['title'] });
+
+    searchInputEl.addEventListener("input", (event) => {
+      const searchPattern = event.target.value;
+      const results = fuse.search(searchPattern);
+      appendSearchResults(results);
+    });
+
+    function appendSearchResults(results) {
+      const html = results.map(result => `
+        <a href="${result.item.link}" class="list-group-item list-group-item-action">${result.item.title}</a>
+      `).join("");
+      searchResultsEl.innerHTML = html;
+    }
+  })
+
+</script>
