@@ -1,0 +1,13 @@
+<div class="d-flex flex-wrap gap-3">
+  <% site.tags.each(function(tag) { %>
+  <a
+    href="<%= tag.permalink %>"
+    class="btn btn-secondary shadow-sm"
+  >
+    #<%= tag.name %>
+    <span class="badge text-bg-danger ms-1">
+      <%= tag.posts.length %>
+    </span>
+  </a>
+  <% }) %>
+</div>

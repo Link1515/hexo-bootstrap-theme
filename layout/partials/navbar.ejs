@@ -53,6 +53,14 @@
           </ul>
         </li>
         <% } %>
+        <li class="nav-item">
+          <a 
+            class="nav-link <%= path.includes('tags/') ? 'active' : '' %>" 
+            href="<%= full_url_for('tags') %>"
+          >
+            文章標籤
+          </a>
+        </li>
       </ul>
 
       <div class="d-flex justify-content-center">
