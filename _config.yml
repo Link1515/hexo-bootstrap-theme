@@ -5,6 +5,7 @@ share_image: ''
 logo:
   title: ''
   image: ''
+footer_content: ''
 
 # copy to _config.yml in the root to enable syntax highlighting
 syntax_highlighter: prismjs
