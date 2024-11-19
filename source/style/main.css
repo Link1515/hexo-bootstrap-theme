@@ -22,6 +22,12 @@ code {
   --bs-pagination-active-border-color: var(--bs-gray-600);
 }
 
+.btn-sm {
+  --bs-btn-padding-y: 0.1rem;
+  --bs-btn-padding-x: 0.4rem;
+  --bs-btn-font-size: 0.75rem;
+}
+
 .content h2::after {
   content: '';
   display: block;

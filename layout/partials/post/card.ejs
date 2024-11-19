@@ -14,8 +14,8 @@
 
     <div class="<%= post.cover ? 'col-md-8' : 'col-md-12' %>">
       <div class="card-body h-100 d-flex flex-column">
-        <h5 class="card-title">
-          <a href="<%= post.permalink %>" class="link-offset-1" style="color: var(--bs-card-title-color);">
+        <h5 class="title card-title">
+          <a href="<%= post.permalink %>" class="link-offset-1">
             <%= post.title %>
           </a>
         </h5>
@@ -40,6 +40,10 @@
 </div>
 
 <style>
+  .post-card .title a {
+    color: var(--bs-card-title-color);
+  }
+
   .post-card img {
     border-top-right-radius: var(--bs-border-radius) !important;
     border-top-left-radius: var(--bs-border-radius) !important;
