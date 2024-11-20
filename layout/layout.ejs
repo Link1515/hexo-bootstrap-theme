@@ -8,9 +8,11 @@
     <%- partial('partials/base/import/css') %>
   </head>
   <body>
-    <%- partial('partials/base/navbar') %>
-    <div class="container-lg mt-4 mb-5"><%- body %></div>
-    <%- partial('partials/base/footer') %>
+    <div class="min-vh-100 d-flex flex-column">
+      <%- partial('partials/base/navbar') %>
+      <div class="flex-grow-1 container-lg mt-4 mb-5"><%- body %></div>
+      <%- partial('partials/base/footer') %>
+    </div>
 
     <%- partial('partials/base/search/searchModal') %>
     <%- partial('partials/base/goTopBtn') %>
