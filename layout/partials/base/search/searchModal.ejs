@@ -2,13 +2,16 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
-        <div class="position-relative mb-2">
+        <div class="position-relative mb-3">
           <input id="searchInput" class="form-control" type="search" style="padding-left: 2.25rem;"/>
           <span class="position-absolute top-50 translate-middle-y search-icon" style="left: 0.75rem;">
             <i class="bi bi-search"></i>
           </span>
         </div>
-        <ul id="searchResults" class="list-group list-group-flush"></ul>
+        <div id="searchResults" class="list-group list-group-flush"></div>
+        <div id="searchNoResult" class="list-group list-group-flush" style="display: none;">
+          <span class="list-group-item">查無結果</span>
+        </div>
       </div>
     </div>
   </div>
