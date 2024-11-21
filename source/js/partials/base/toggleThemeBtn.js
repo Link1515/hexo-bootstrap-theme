@@ -6,11 +6,11 @@ initTheme();
 
 function initTheme() {
   const theme = window.localStorage.getItem('theme') ?? '';
-  document.documentElement.dataset.bsTheme = theme;
+  document.body.dataset.bsTheme = theme;
 
-  if (theme === '') {
-    toggleBtnIcon();
-  }
+  theme === ''
+    ? sunIconEl.classList.remove('d-none')
+    : moonIconEl.classList.remove('d-none');
 }
 
 toggleThemeBtnEl.addEventListener('click', () => {
@@ -18,19 +18,19 @@ toggleThemeBtnEl.addEventListener('click', () => {
   toggleTheme();
 });
 
-function toggleBtnIcon () {
+function toggleBtnIcon() {
   sunIconEl.classList.toggle('d-none');
   moonIconEl.classList.toggle('d-none');
 }
 
-function toggleTheme () {
-  const theme = document.documentElement.dataset.bsTheme;
+function toggleTheme() {
+  const theme = document.body.dataset.bsTheme;
 
   if (theme === 'dark') {
-    document.documentElement.dataset.bsTheme = '';
+    document.body.dataset.bsTheme = '';
     window.localStorage.setItem('theme', '');
   } else {
-    document.documentElement.dataset.bsTheme = 'dark';
+    document.body.dataset.bsTheme = 'dark';
     window.localStorage.setItem('theme', 'dark');
   }
 }

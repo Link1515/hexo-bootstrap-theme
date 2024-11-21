@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,9 @@
     <%- partial('partials/base/shareMeta') %>
     <%- partial('partials/base/import/css') %>
   </head>
-  <body>
+  <body data-bs-theme="dark">
+    <%- partial('partials/base/themeInitScript') %>
+
     <div class="min-vh-100 d-flex flex-column">
       <%- partial('partials/base/navbar') %>
       <div class="flex-grow-1 container-lg mt-4 mb-5"><%- body %></div>
