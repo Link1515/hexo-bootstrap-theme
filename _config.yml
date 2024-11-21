@@ -1,13 +1,16 @@
+# common config
 title: hexo-bootstrap-theme
 subtitle: ''
 description: This is a bootstrap theme for hexo.
+
+# theme config
 share_image: ''
 logo:
   title: ''
   image: ''
 footer_content: ''
 
-# copy to _config.yml in the root to enable syntax highlighting
+# copy to root _config.yml to enable syntax highlighting
 syntax_highlighter: prismjs
 prismjs:
   preprocess: false
