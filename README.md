@@ -36,9 +36,12 @@ Then start enjoying the theme!
 theme_config:
   share_image: ''     # default share image
   logo:
-    title: ''         # logo title in the navbar
+    title: 'My Blog'  # logo title in the navba
     image: ''         # logo image in the navbar
-  footer_content: ''  # footer content
+  post:
+    show_cover: true           # show cover in the post
+    show_description: true     # show description in the post
+  footer_content: © Copyright 2024   # footer content
 ```
 
 ## Syntax highlighting

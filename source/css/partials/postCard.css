@@ -7,7 +7,7 @@
   border-top-left-radius: var(--bs-border-radius) !important;
 }
 
-.post-card .excerpt {
+.post-card .description {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;

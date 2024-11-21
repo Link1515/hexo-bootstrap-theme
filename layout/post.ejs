@@ -1,18 +1,5 @@
 <div class="post">
-  <% if (page.cover) { %>
-  <div class="text-center mb-4">
-    <img
-      class="img-fluid rounded"
-      width="1200"
-      height="630"
-      src="<%= page.cover %>"
-      alt="cover"
-    />
-  </div>
-  <% } %>
-
   <h1><%= page.title %></h1>
-
   <hr />
 
   <div class="d-flex flex-column gap-2 mb-4">
@@ -29,5 +16,22 @@
     <% } %>
   </div>
 
-  <div class="content"><%- page.content %></div>
+  <% if (theme.post.show_cover && page.cover) { %>
+  <div class="text-center mb-4">
+    <img
+      class="img-fluid rounded"
+      width="1200"
+      height="630"
+      src="<%= page.cover %>"
+      alt="cover"
+    />
+  </div>
+  <% } %>
+
+  <div class="content">
+    <% if (theme.post.show_description) { %>
+      <p><%= page.description %></p>
+    <% } %>
+    <%- page.content %>
+  </div>
 </div>

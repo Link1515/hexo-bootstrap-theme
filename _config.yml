@@ -6,9 +6,12 @@ description: This is a bootstrap theme for hexo.
 # theme config
 share_image: ''
 logo:
-  title: ''
+  title: 'My Blog'
   image: ''
-footer_content: ''
+post:
+  show_cover: true
+  show_description: true
+footer_content: © Copyright 2024
 
 # copy to root _config.yml to enable syntax highlighting
 syntax_highlighter: prismjs
