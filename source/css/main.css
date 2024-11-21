@@ -63,7 +63,12 @@ a:focus-visible {
   border-bottom-left-radius: var(--bs-list-group-border-radius);
 }
 
-.content h2::after {
+.post {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.post .content h2::after {
   content: '';
   display: block;
   height: 1px;
@@ -75,7 +80,7 @@ a:focus-visible {
   opacity: 0.25;
 }
 
-.content img {
+.post .content img {
   max-width: 100%;
   display: block;
   margin: auto;
