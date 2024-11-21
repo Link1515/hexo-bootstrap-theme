@@ -1,4 +1,7 @@
-<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm">
+<nav
+  id="navbar"
+  class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm"
+>
   <div class="container-lg">
     <a class="navbar-brand" href="<%= config.url %>">
       <% if (theme.logo.image) { %>
@@ -18,21 +21,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a 
-            class="nav-link <%= is_home() ? 'active' : '' %>" 
+          <a
+            class="nav-link <%= is_home() ? 'active' : '' %>"
             href="<%= config.url %>"
           >
             <i class="bi bi-house-fill"></i>
-            首頁
+            <%= __('home') %>
           </a>
         </li>
         <li class="nav-item">
-          <a 
-            class="nav-link <%= is_archive() ? 'active' : '' %>" 
+          <a
+            class="nav-link <%= is_archive() ? 'active' : '' %>"
             href="<%= full_url_for('archives') %>"
           >
             <i class="bi bi-list-ul"></i>
-            列表
+            <%= __('list') %>
           </a>
         </li>
         <% if (site.categories.length > 0) { %>
@@ -42,26 +45,26 @@
             href="<%= full_url_for('categories') %>"
           >
             <i class="bi bi-folder-fill"></i>
-            分類
+            <%= __('categories') %>
           </a>
         </li>
         <% } %>
         <% if (site.tags.length > 0) { %>
         <li class="nav-item">
-          <a 
-            class="nav-link <%= path.includes('tags/') ? 'active' : '' %>" 
+          <a
+            class="nav-link <%= path.includes('tags/') ? 'active' : '' %>"
             href="<%= full_url_for('tags') %>"
           >
             <i class="bi bi-tags-fill"></i>
-            標籤
+            <%= __('tags') %>
           </a>
         </li>
         <% } %>
       </ul>
 
       <div class="d-flex justify-content-center">
-        <%- partial('partials/base/toggleThemeBtn')  %>
-        <%- partial('partials/base/search/searchBtn')  %>
+        <%- partial('partials/base/toggleThemeBtn') %>
+        <%- partial('partials/base/search/searchBtn') %>
       </div>
     </div>
   </div>
