@@ -3,7 +3,7 @@
   class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm"
 >
   <div class="container-lg">
-    <a class="navbar-brand" href="<%= config.url %>">
+    <a class="navbar-brand" href="<%= url_for() %>">
       <% if (theme.logo.image) { %>
       <img class="me-1" src="<%= theme.logo_image %>" height="50" alt="logo" />
       <% } %>
@@ -23,7 +23,7 @@
         <li class="nav-item">
           <a
             class="nav-link <%= is_home() ? 'active' : '' %>"
-            href="<%= config.url %>"
+            href="<%= url_for() %>"
           >
             <i class="bi bi-house-fill"></i>
             <%= __('home') %>
@@ -32,7 +32,7 @@
         <li class="nav-item">
           <a
             class="nav-link <%= is_archive() ? 'active' : '' %>"
-            href="<%= full_url_for('archives') %>"
+            href="<%= url_for('archives') %>"
           >
             <i class="bi bi-list-ul"></i>
             <%= __('list') %>
@@ -42,7 +42,7 @@
         <li class="nav-item">
           <a
             class="nav-link <%= path.includes('categories/') ? 'active' : '' %>"
-            href="<%= full_url_for('categories') %>"
+            href="<%= url_for('categories') %>"
           >
             <i class="bi bi-folder-fill"></i>
             <%= __('categories') %>
@@ -53,7 +53,7 @@
         <li class="nav-item">
           <a
             class="nav-link <%= path.includes('tags/') ? 'active' : '' %>"
-            href="<%= full_url_for('tags') %>"
+            href="<%= url_for('tags') %>"
           >
             <i class="bi bi-tags-fill"></i>
             <%= __('tags') %>

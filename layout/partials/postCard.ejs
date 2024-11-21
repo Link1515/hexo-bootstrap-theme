@@ -1,7 +1,7 @@
 <div class="post-card card mb-3">
   <div class="row g-0 h-100">
     <% if (post.cover) { %>
-    <a href="<%= post.permalink %>" class="col-md-4 h-100">
+    <a href="<%= url_for(post.path) %>" class="col-md-4 h-100">
       <img
         src="<%= post.cover %>"
         class="w-100 h-100 object-fit-cover"
@@ -15,7 +15,7 @@
     <div class="<%= post.cover ? 'col-md-8' : 'col-md-12' %>">
       <div class="card-body h-100 d-flex flex-column">
         <h5 class="title card-title">
-          <a href="<%= post.permalink %>" class="link-offset-1">
+          <a href="<%= url_for(post.path) %>" class="link-offset-1">
             <%= post.title %>
           </a>
         </h5>

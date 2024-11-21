@@ -15,13 +15,17 @@
 
   <hr />
 
-  <div class="d-flex flex-column gap-1 mb-4">
+  <div class="d-flex flex-column gap-2 mb-4">
     <% if (page.categories.length > 0) { %>
     <div>
       <%- partial('partials/categories', { categories: page.categories }) %>
     </div>
-    <% } %> <% if (page.tags.length > 0) { %>
-    <div><%- partial('partials/tags', { tags: page.tags }) %></div>
+    <% } %> 
+
+    <% if (page.tags.length > 0) { %>
+    <div>
+      <%- partial('partials/tags', { tags: page.tags }) %>
+    </div>
     <% } %>
   </div>
 

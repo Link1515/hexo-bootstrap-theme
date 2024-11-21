@@ -1,7 +1,7 @@
 <div class="d-flex flex-wrap gap-3">
   <% site.categories.each(function(category) { %>
   <a
-    href="<%= category.permalink %>"
+    href="<%= url_for(category.path) %>"
     class="btn btn-secondary"
   >
     <i class="bi bi-folder-fill"></i>

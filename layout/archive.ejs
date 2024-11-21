@@ -16,14 +16,14 @@ const sortedYears = page.year ?
 <div class="archive">
   <% for (const year of sortedYears) { %>
   <h3>
-    <a href="<%= full_url_for(`/archives/${year}`) %>" class="link-body-emphasis">
+    <a href="<%= url_for(`/archives/${year}`) %>" class="link-body-emphasis">
       <%= year %>
     </a>
   </h3>
   <div class="list-group list-group-flush mb-3">
     <% for (const post of postsByYear[year]) { %>
     <a
-      href="<%= post.permalink %>"
+      href="<%= url_for(post.path) %>"
       class="list-group-item list-group-item-action d-flex gap-2"
     >
       <span><%= post.date.format('MM-DD') %></span>
