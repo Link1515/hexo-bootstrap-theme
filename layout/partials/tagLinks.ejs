@@ -1,10 +1,10 @@
-<div class="d-flex flex-wrap gap-2">
+<div class="tagLinks d-flex flex-wrap gap-2">
   <% tags.forEach(tag => { %>
   <a
     href="<%= url_for(tag.path) %>"
     class="btn btn-secondary btn-sm"
   >
-    <i class="bi bi-tag-fill"></i>
+    <i class="bi bi-tag-fill icon-15"></i>
     <%= tag.name %>
   </a>
   <% }) %>

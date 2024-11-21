@@ -15,7 +15,7 @@
       data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent"
     >
-      <i class="bi bi-list"></i>
+      <i class="bi bi-list icon-20"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -25,7 +25,7 @@
             class="nav-link <%= is_home() ? 'active' : '' %>"
             href="<%= url_for() %>"
           >
-            <i class="bi bi-house-fill"></i>
+            <i class="bi bi-house-fill icon-20"></i>
             <%= __('home') %>
           </a>
         </li>
@@ -34,7 +34,7 @@
             class="nav-link <%= is_archive() ? 'active' : '' %>"
             href="<%= url_for('archives') %>"
           >
-            <i class="bi bi-list-ul"></i>
+            <i class="bi bi-list-ul icon-20"></i>
             <%= __('list') %>
           </a>
         </li>
@@ -44,7 +44,7 @@
             class="nav-link <%= path.includes('categories/') ? 'active' : '' %>"
             href="<%= url_for('categories') %>"
           >
-            <i class="bi bi-folder-fill"></i>
+            <i class="bi bi-folder-fill icon-20"></i>
             <%= __('categories') %>
           </a>
         </li>
@@ -55,7 +55,7 @@
             class="nav-link <%= path.includes('tags/') ? 'active' : '' %>"
             href="<%= url_for('tags') %>"
           >
-            <i class="bi bi-tags-fill"></i>
+            <i class="bi bi-tags-fill icon-20"></i>
             <%= __('tags') %>
           </a>
         </li>

@@ -1,4 +1,6 @@
 @import './partials/postCard.css';
+@import './partials/categoryLinks.css';
+@import './partials/tagLinks.css';
 @import './partials/base/goTopBtn.css';
 @import './partials/base/footer.css';
 
@@ -103,4 +105,16 @@ a:focus-visible {
   -webkit-box-orient: vertical;
   line-clamp: 3;
   -webkit-line-clamp: 3;
+}
+
+.icon-15 {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+}
+
+.icon-20 {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
 }
