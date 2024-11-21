@@ -5,13 +5,13 @@
   <div class="d-flex flex-column gap-2 mb-4">
     <% if (page.categories.length > 0) { %>
     <div>
-      <%- partial('partials/categories', { categories: page.categories }) %>
+      <%- partial('partials/categoryLinks', { categories: page.categories }) %>
     </div>
     <% } %> 
 
     <% if (page.tags.length > 0) { %>
     <div>
-      <%- partial('partials/tags', { tags: page.tags }) %>
+      <%- partial('partials/tagLinks', { tags: page.tags }) %>
     </div>
     <% } %>
   </div>
