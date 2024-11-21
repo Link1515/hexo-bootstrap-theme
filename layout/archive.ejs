@@ -26,8 +26,8 @@ const sortedYears = page.year ?
       href="<%= url_for(post.path) %>"
       class="list-group-item list-group-item-action d-flex gap-2"
     >
-      <span><%= post.date.format('MM-DD') %></span>
-      <span><%= post.title %></span>
+      <span class="flex-shrink-0"><%= post.date.format('MM-DD') %></span>
+      <span class="line-clamp-2"><%= post.title %></span>
     </a>
     <% } %>
   </div>

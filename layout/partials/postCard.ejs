@@ -19,11 +19,11 @@
             <%= post.title %>
           </a>
         </h5>
-        <div class="card-text mb-3">
+        <div class="card-text mb-2">
           <%- partial('partials/categories', { categories: post.categories })
           %>
         </div>
-        <p class="description card-text"><%= post.description %></p>
+        <p class="line-clamp-3 card-text"><%= post.description %></p>
         <div class="card-text mb-1 mt-auto">
           <%- partial('partials/tags', { tags: post.tags }) %>
         </div>
