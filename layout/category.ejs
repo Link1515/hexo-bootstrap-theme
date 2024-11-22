@@ -1,4 +1,7 @@
-<h1><%= page.category %></h1>
+<h1>
+  <i class="bi bi-folder-fill icon-32"></i>
+  <%= page.category %>
+</h1>
 
 <% page.posts.sort('date', 'desc').forEach(post => { %>
   <%- partial('partials/postCard', { post }) %>

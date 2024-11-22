@@ -106,13 +106,22 @@ a:focus-visible {
 }
 
 .icon-15 {
+  font-size: 15px;
   display: inline-block;
   width: 15px;
   height: 15px;
 }
 
 .icon-20 {
+  font-size: 20px;
   display: inline-block;
   width: 20px;
   height: 20px;
+}
+
+.icon-32 {
+  font-size: 32px;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
 }
