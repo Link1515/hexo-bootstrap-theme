@@ -44,7 +44,22 @@ theme_config:
   footer_content: © Copyright 2024   # footer content
 ```
 
-## Syntax highlighting
+## Post Front-matter
+
+```yaml
+---
+title: My Post
+date: 2024-11-22 11:35:00
+cover: https://myCover.com/cover.jpg   # For share image, and recommended to use a 1200 x 630 image
+description: hello my description      # For share description
+categories: my category
+tags:
+  - tag 1
+  - tag 2
+---
+```
+
+## Syntax Highlighting
 
 This theme use `prismjs` for syntax highlighting. If you want to enable it, update the configuration in _config.yml
 
