@@ -1,5 +1,7 @@
 hexo.extend.filter.register('after_render:html', function (html, data) {
-  html = changeHeadTitle(html, data.config.title, data.page.title);
+  if (data.page.title) {
+    html = changeHeadTitle(html, data.config.title, data.page.title);
+  }
 
   if (data.page.cover) {
     html = changeHeadImage(html, data.page.cover);
