@@ -5,6 +5,7 @@ description: This is a bootstrap theme for hexo.
 
 # theme config
 share_image: ''
+favicon: ''
 logo:
   title: 'My Blog'
   image: ''

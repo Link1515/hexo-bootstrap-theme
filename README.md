@@ -32,8 +32,9 @@ Then start enjoying the theme!
 ```yaml
 theme_config:
   share_image: ''     # default share image
+  favicon: ''         # favicon path
   logo:
-    title: 'My Blog'  # logo title in the navba
+    title: 'My Blog'  # logo title in the navbar
     image: ''         # logo image in the navbar
   post:
     show_cover: true           # show cover in the post
