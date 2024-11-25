@@ -1,3 +1,5 @@
+const path = require('path');
+
 const {
   changeHeadTitle,
   changeHeadImage,
@@ -10,7 +12,7 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
   }
 
   if (data.page.cover) {
-    html = changeHeadImage(html, data.page.cover);
+    html = changeHeadImage(html, path.posix.join(hexo.config.root, data.page.cover));
   }
 
   if (data.page.description) {

@@ -10,7 +10,7 @@ function changeHeadTitle(html, title, pageTitle) {
   );
 
   html = html.replace(
-    /(<meta name="twitter:title" value=").*?(" \/>)/,
+    /(<meta name="twitter:title" content=").*?(" \/>)/,
     (_, start, end) => `${start}${pageTitle} | ${title}${end}`
   );
 
@@ -24,7 +24,7 @@ function changeHeadImage(html, cover) {
   );
 
   html = html.replace(
-    /(<meta name="twitter:image" value=").*?(" \/>)/,
+    /(<meta name="twitter:image" content=").*?(" \/>)/,
     (_, start, end) => `${start}${cover}${end}`
   );
 
@@ -43,7 +43,7 @@ function changeHeadDescription(html, description) {
   );
 
   html = html.replace(
-    /(<meta name="twitter:description" value=").*?(" \/>)/,
+    /(<meta name="twitter:description" content=").*?(" \/>)/,
     (_, start, end) => `${start}${description}${end}`
   );
 
