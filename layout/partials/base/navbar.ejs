@@ -7,7 +7,7 @@
       <% if (theme.logo.image) { %>
       <img class="me-1" src="<%= theme.logo_image %>" height="50" alt="logo" />
       <% } %>
-      <%= theme.logo.title %>
+      <%= theme.logo.title || config.title %>
     </a>
     <button
       class="navbar-toggler px-2"
