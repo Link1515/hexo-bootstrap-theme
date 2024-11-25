@@ -3,6 +3,11 @@ let title = config.title;
 if (config.subtitle) {
   title += ` | ${config.subtitle}`;
 }
+
+let shareImage = theme.share_image;
+if (shareImage && !shareImage.startsWith('http')) {
+  shareImage = url_for(shareImage);
+}
 %>
 
 <title><%= title %></title>
@@ -12,9 +17,9 @@ if (config.subtitle) {
 <meta property="og:url" content="<%= config.url %>" />
 <meta property="og:title" content="<%= title %>" />
 <meta property="og:description" content="<%= config.description %>" />
-<meta property="og:image" content="<%= theme.share_image %>" />
+<meta property="og:image" content="<%= shareImage %>" />
 
 <meta name="twitter:card" value="summary_large_image" />
 <meta name="twitter:title" value="<%= title %>" />
 <meta name="twitter:description" value="<%= config.description %>" />
-<meta name="twitter:image" value="<%= theme.share_image %>" />
+<meta name="twitter:image" value="<%= shareImage %>" />
