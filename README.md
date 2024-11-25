@@ -10,16 +10,13 @@ A simple hexo theme made by [bootstrap 5](https://getbootstrap.com/)
 
 - Open terminal in your hexo project
 
-- cd into `themes` directory
+- Clone this repository into `themes` directory
 
 ```bash
-cd themes
-```
+git clone https://github.com/Link1515/hexo-bootstrap-theme themes/hexo-bootstrap-theme
 
-- Clone this repository
-
-```bash
-git clone https://github.com/Link1515/hexo-bootstrap-theme
+# Or, use it as submodule
+git submodule add https://github.com/Link1515/hexo-bootstrap-theme themes/hexo-bootstrap-theme
 ```
 
 - Modify the `theme` configuration in the root `_config.yml` file to `hexo-bootstrap-theme`
