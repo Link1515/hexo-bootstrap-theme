@@ -1,9 +1,12 @@
+const searchModalEl = document.querySelector('#searchModal');
 const searchInputEl = document.querySelector('#searchInput');
 const searchResultsEl = document.querySelector('#searchResults');
 const searchNoResultEl = document.querySelector('#searchNoResult');
 const noResultEl = document.querySelector('#searchResults #noResult');
 const postTitlesEl = document.querySelector('#postTitles');
 const postTitles = JSON.parse(postTitlesEl.dataset.postTitles) || [];
+
+searchModalEl.addEventListener('shown.bs.modal', () => searchInputEl.focus());
 
 const fuse = new window.Fuse(postTitles, { keys: ['title'] });
 
