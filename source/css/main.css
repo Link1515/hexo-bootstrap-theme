@@ -78,6 +78,10 @@ a:focus-visible {
   margin-bottom: 1rem;
 }
 
+.post .content ul {
+  line-height: 1.75;
+}
+
 .post .content h2::after {
   content: '';
   display: block;
