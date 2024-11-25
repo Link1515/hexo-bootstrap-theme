@@ -44,11 +44,13 @@ theme_config:
 
 ## Post Front-matter
 
+- You can update your `scaffolds/post.md` with following
+
 ```yaml
 ---
-title: My Post
-date: 2024-11-22 11:35:00
-cover: https://myCover.com/cover.jpg   # For share image, and recommended to use a 1200 x 630 image
+title: {{ title }}
+date: {{ date }}
+cover: https://myBlog.com/cover.jpg   # For share image, and recommended to use a 1200 x 630 image
 description: hello my description      # For share description
 categories: my category
 tags:
