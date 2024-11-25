@@ -1,5 +1,10 @@
 <div class="post">
   <h1><%= page.title %></h1>
+  <small class="text-body-secondary">
+    <time datetime="<%= page.date.toISOString() %>">
+      <%= page.date.format('YYYY-MM-DD') %>
+    </time>
+  </small>
   <hr />
 
   <div class="d-flex flex-column gap-2 mb-4">
