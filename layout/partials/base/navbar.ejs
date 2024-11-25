@@ -3,7 +3,7 @@
   class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow-sm"
 >
   <div class="container-lg">
-    <a class="navbar-brand" href="<%= url_for() %>">
+    <a id="logo" class="navbar-brand" href="<%= url_for() %>">
       <% if (theme.logo.image) { %>
       <img class="me-1" src="<%= theme.logo_image %>" height="50" alt="logo" />
       <% } %>
