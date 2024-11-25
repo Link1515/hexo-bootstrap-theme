@@ -3,31 +3,21 @@ let title = config.title;
 if (config.subtitle) {
   title += ` | ${config.subtitle}`;
 }
-
-let shareImage = theme.share_image;
-if (shareImage && !shareImage.startsWith('http')) {
-  shareImage = url_for(shareImage);
-}
-
-let favicon = theme.favicon;
-if (favicon && !favicon.startsWith('http')) {
-  favicon = url_for(favicon);
-}
 %>
 
 <title><%= title %></title>
 <meta name="description" content="<%= config.description %>" />
-<% if (favicon) { %>
-  <link rel="icon" type="image/x-icon" href="<%= favicon %>">
+<% if (theme.favicon) { %>
+  <link rel="icon" type="image/x-icon" href="<%= url_or_path(theme.favicon) %>">
 <% } %>
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="<%= config.url %>" />
 <meta property="og:title" content="<%= title %>" />
 <meta property="og:description" content="<%= config.description %>" />
-<meta property="og:image" content="<%= shareImage %>" />
+<meta property="og:image" content="<%= url_or_path(theme.share_image) %>" />
 
 <meta name="twitter:card" value="summary_large_image" />
 <meta name="twitter:title" value="<%= title %>" />
 <meta name="twitter:description" value="<%= config.description %>" />
-<meta name="twitter:image" value="<%= shareImage %>" />
+<meta name="twitter:image" value="<%= url_or_path(theme.share_image) %>" />

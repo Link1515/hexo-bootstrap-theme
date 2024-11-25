@@ -1,10 +1,3 @@
-<% 
-let cover = page.cover;
-if (cover && !cover.startsWith('http')) {
-  cover = url_for(cover);
-}
-%>
-
 <div class="post">
   <h1><%= page.title %></h1>
   <hr />
@@ -23,13 +16,13 @@ if (cover && !cover.startsWith('http')) {
     <% } %>
   </div>
 
-  <% if (theme.post.show_cover && cover) { %>
+  <% if (theme.post.show_cover && page.cover) { %>
   <div class="text-center mb-4">
     <img
       class="img-fluid rounded"
       width="1200"
       height="630"
-      src="<%= cover %>"
+      src="<%= url_or_path(page.cover) %>"
       alt="cover"
     />
   </div>

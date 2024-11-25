@@ -3,7 +3,7 @@
     <% if (post.cover) { %>
     <a href="<%= url_for(post.path) %>" class="col-md-4 h-100">
       <img
-        src="<%= post.cover %>"
+        src="<%= url_or_path(post.cover) %>"
         class="w-100 h-100 object-fit-cover"
         width="1200"
         height="630"
