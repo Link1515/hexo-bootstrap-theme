@@ -66,6 +66,7 @@ a:focus-visible {
 .post {
   max-width: 880px;
   margin: 0 auto;
+  letter-spacing: 0.025em;
 }
 
 .post .content h2 {
