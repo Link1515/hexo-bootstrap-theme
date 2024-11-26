@@ -79,6 +79,10 @@ a:focus-visible {
   letter-spacing: 0.025em;
 }
 
+.post .content {
+  text-align: justify;
+}
+
 .post .content h2 {
   margin-top: 3rem;
   margin-bottom: 1.5rem;
@@ -109,7 +113,7 @@ a:focus-visible {
   max-width: 100%;
   display: block;
   margin: auto;
-  padding: 1.5rem 0;
+  padding-bottom: 1rem;
 }
 
 /* utils */
@@ -128,6 +132,10 @@ a:focus-visible {
   -webkit-box-orient: vertical;
   line-clamp: 3;
   -webkit-line-clamp: 3;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .icon-15 {
