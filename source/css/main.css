@@ -43,11 +43,11 @@ a:focus-visible {
 }
 
 .pagination .page-link {
-  --bs-pagination-color: var(--bs-gray-300)
+  --bs-pagination-color: var(--bs-body-color)
 }
 
 .pagination .page-link:hover {
-  --bs-pagination-hover-color: var(--bs-pagination-active-color);
+  --bs-pagination-hover-color: var(--bs-body-color);
 }
 
 .pagination .page-link:focus {
