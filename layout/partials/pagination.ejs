@@ -4,30 +4,30 @@
     <li class="page-item">
       <a
         class="page-link <%= page.prev === 0 ? 'disabled' : '' %>"
-        href="<%= page.prev_link %>"
+        href="<%= url_for(page.prev_link) %>"
       >
         <span>&laquo;</span>
       </a>
     </li>
     <% if (page.prev !== 0) { %>
     <li class="page-item">
-      <a class="page-link" href="<%= page.prev_link %>"><%= page.prev %></a>
+      <a class="page-link" href="<%= url_for(page.prev_link) %>"><%= page.prev %></a>
     </li>
     <% } %>
     <li class="page-item active">
-      <a class="page-link" href="<%= page.current_link %>"
+      <a class="page-link" href="<%= url_for(page.current_url) %>"
         ><%= page.current %></a
       >
     </li>
     <% if (page.next !== 0) { %>
     <li class="page-item">
-      <a class="page-link" href="<%= page.next_link %>"><%= page.next %></a>
+      <a class="page-link" href="<%= url_for(page.next_link) %>"><%= page.next %></a>
     </li>
     <% } %>
     <li class="page-item">
       <a
         class="page-link <%= page.next === 0 ? 'disabled' : '' %>"
-        href="<%= page.next_link %>"
+        href="<%= url_for(page.next_link) %>"
       >
         <span>&raquo;</span>
       </a>

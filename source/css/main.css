@@ -42,6 +42,19 @@ a:focus-visible {
   --bs-pagination-active-border-color: var(--bs-gray-600);
 }
 
+.pagination .page-link {
+  --bs-pagination-color: var(--bs-gray-300)
+}
+
+.pagination .page-link:hover {
+  --bs-pagination-hover-color: var(--bs-pagination-active-color);
+}
+
+.pagination .page-link:focus {
+  --bs-pagination-focus-color: var(--bs-pagination-active-color);
+  box-shadow: none;
+}
+
 .form-control:focus {
   border-color: #86b7fe;
   border-color: var(--bs-gray-400);
