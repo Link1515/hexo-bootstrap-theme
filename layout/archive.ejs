@@ -1,6 +1,6 @@
 <% 
 const postsByYear = {}; 
-site.posts.sort('date', 'desc').forEach(post => {
+page.posts.sort('date', 'desc').forEach(post => {
   const year = post.date.format('YYYY'); 
   if (!postsByYear[year]) {
     postsByYear[year] = []; 
