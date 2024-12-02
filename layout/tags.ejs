@@ -1,5 +1,5 @@
 <div class="d-flex flex-wrap gap-3">
-  <% site.tags.each(function(tag) { %>
+  <% site.tags.sort('name').each(function(tag) { %>
   <a
     href="<%= url_for(tag.path) %>"
     class="btn btn-secondary"
