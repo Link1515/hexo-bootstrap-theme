@@ -1,4 +1,4 @@
-function debounce(fn, { delay = 300, leading = false } = {}) {
+window.debounce = function (fn, { delay = 300, leading = false } = {}) {
   let timer;
   let hasCalledLeading = false;
 
@@ -15,4 +15,4 @@ function debounce(fn, { delay = 300, leading = false } = {}) {
       fn(...args);
     }, delay);
   };
-}
+};
