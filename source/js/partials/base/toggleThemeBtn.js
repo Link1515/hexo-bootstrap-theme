@@ -1,6 +1,11 @@
 const toggleThemeBtnEl = document.querySelector('#toggleThemeBtn');
 
-toggleThemeBtnEl.addEventListener('click', toggleTheme);
+toggleThemeBtnEl.addEventListener('click', toggleThemeWithAnimation);
+
+function toggleThemeWithAnimation() {
+  if (!document.startViewTransition) toggleTheme();
+  document.startViewTransition(toggleTheme);
+}
 
 function toggleTheme() {
   const theme = document.body.dataset.bsTheme;

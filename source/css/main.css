@@ -1,5 +1,6 @@
 @import './partials/postCard.css';
 @import './partials/base/goTopBtn.css';
+@import './partials/base/toggleThemeBtn.css';
 @import './partials/base/footer.css';
 
 @media (min-width: 768px) {
@@ -33,7 +34,7 @@ blockquote {
 
 a:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 .25rem var(--bs-gray-400);
+  box-shadow: 0 0 0 0.25rem var(--bs-gray-400);
   border-radius: var(--bs-border-radius-sm);
 }
 
@@ -43,7 +44,7 @@ a:focus-visible {
 }
 
 .pagination .page-link {
-  --bs-pagination-color: var(--bs-body-color)
+  --bs-pagination-color: var(--bs-body-color);
 }
 
 .pagination .page-link:hover {
@@ -58,12 +59,12 @@ a:focus-visible {
 .form-control:focus {
   border-color: #86b7fe;
   border-color: var(--bs-gray-400);
-  box-shadow: 0 0 0 .25rem var(--bs-gray-400);
+  box-shadow: 0 0 0 0.25rem var(--bs-gray-400);
 }
 
 .navbar-toggler:focus,
 .nav-link:focus-visible {
-  box-shadow: 0 0 0 .25rem var(--bs-gray-400);
+  box-shadow: 0 0 0 0.25rem var(--bs-gray-400);
 }
 
 .btn-sm {
@@ -73,7 +74,7 @@ a:focus-visible {
 }
 
 .btn:focus-visible {
-  --bs-btn-focus-box-shadow: 0 0 0 .25rem var(--bs-gray-400);
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem var(--bs-gray-400);
 }
 
 .list-group-flush .list-group-item:first-child {
@@ -130,26 +131,26 @@ a:focus-visible {
 }
 
 .post table {
-    --bs-table-color-type: initial;
-    --bs-table-bg-type: initial;
-    --bs-table-color-state: initial;
-    --bs-table-bg-state: initial;
-    --bs-table-color: var(--bs-emphasis-color);
-    --bs-table-bg: var(--bs-body-bg);
-    --bs-table-border-color: var(--bs-border-color);
-    --bs-table-accent-bg: transparent;
-    --bs-table-striped-color: var(--bs-emphasis-color);
-    --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
-    --bs-table-active-color: var(--bs-emphasis-color);
-    --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
-    --bs-table-hover-color: var(--bs-emphasis-color);
-    --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
-    width: 100%;
-    margin-bottom: 1rem;
-    vertical-align: top;
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--bs-table-border-color);
+  --bs-table-color-type: initial;
+  --bs-table-bg-type: initial;
+  --bs-table-color-state: initial;
+  --bs-table-bg-state: initial;
+  --bs-table-color: var(--bs-emphasis-color);
+  --bs-table-bg: var(--bs-body-bg);
+  --bs-table-border-color: var(--bs-border-color);
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: var(--bs-emphasis-color);
+  --bs-table-striped-bg: rgba(var(--bs-emphasis-color-rgb), 0.05);
+  --bs-table-active-color: var(--bs-emphasis-color);
+  --bs-table-active-bg: rgba(var(--bs-emphasis-color-rgb), 0.1);
+  --bs-table-hover-color: var(--bs-emphasis-color);
+  --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--bs-table-border-color);
 }
 
 .post table > tbody > tr:nth-of-type(odd) > * {
@@ -163,11 +164,15 @@ a:focus-visible {
 
 .post table td,
 .post table th {
-  padding: .5rem .5rem;
-  color: var(--bs-table-color-state, var(--bs-table-color-type, var(--bs-table-color)));
+  padding: 0.5rem 0.5rem;
+  color: var(
+    --bs-table-color-state,
+    var(--bs-table-color-type, var(--bs-table-color))
+  );
   background-color: var(--bs-table-bg);
   border-bottom-width: var(--bs-border-width);
-  box-shadow: inset 0 0 0 9999px var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
+  box-shadow: inset 0 0 0 9999px
+    var(--bs-table-bg-state, var(--bs-table-bg-type, var(--bs-table-accent-bg)));
 }
 
 /* utils */
