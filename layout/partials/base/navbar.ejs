@@ -5,9 +5,13 @@
   <div class="container-lg">
     <a id="logo" class="navbar-brand" href="<%= url_for() %>">
       <% if (theme.logo.image) { %>
-      <img class="me-1" src="<%= url_or_path(theme.logo.image) %>" height="50" alt="logo" />
-      <% } %>
-      <%= theme.logo.title || config.title %>
+      <img
+        class="me-1"
+        src="<%= url_or_path(theme.logo.image) %>"
+        height="50"
+        alt="logo"
+      />
+      <% } %> <%= theme.logo.title || config.title %>
     </a>
     <button
       class="navbar-toggler px-2"
@@ -48,8 +52,7 @@
             <%= __('categories') %>
           </a>
         </li>
-        <% } %>
-        <% if (site.tags.length > 0) { %>
+        <% } %> <% if (site.tags.length > 0) { %>
         <li class="nav-item">
           <a
             class="nav-link <%= path.includes('tags/') ? 'active' : '' %>"
@@ -63,8 +66,8 @@
       </ul>
 
       <div class="d-flex justify-content-center">
-        <%- partial('partials/base/toggleThemeBtn') %>
-        <%- partial('partials/base/search/searchBtn') %>
+        <%- partial('partials/base/toggleThemeBtn') %> <%-
+        partial('partials/base/search/searchBtn') %>
       </div>
     </div>
   </div>
