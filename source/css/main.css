@@ -13,6 +13,10 @@
   }
 }
 
+:root {
+  scroll-padding-top: 84px;
+}
+
 .code-toolbar {
   margin: 1rem 0;
 }
@@ -95,6 +99,19 @@ a:focus-visible {
 
 .post .content {
   text-align: justify;
+}
+
+.post .content h1 a:first-child,
+.post .content h2 a:first-child,
+.post .content h3 a:first-child {
+  margin-right: 6px;
+  text-decoration: none;
+}
+
+.post .content h1 a:first-child::before,
+.post .content h2 a:first-child::before,
+.post .content h3 a:first-child::before {
+  content: '#';
 }
 
 .post .content h2 {
