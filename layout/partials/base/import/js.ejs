@@ -1,6 +1,8 @@
 <script src="<%= url_for('lib/bootstrap/bootstrap.bundle.min.js') %>"></script>
 
-<script src="<%= url_for('lib/prismjs/prism.min.js') %>"></script>
+<% if (config.syntax_highlighter === 'prismjs') { %>
+  <script src="<%= url_for('lib/prismjs/prism.min.js') %>"></script>
+<% } %>
 
 <script src="<%= url_for('lib/fuse/fuse.js') %>"></script>
 

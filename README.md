@@ -61,7 +61,7 @@ tags:
 
 ## Syntax Highlighting
 
-This theme use `prismjs` for syntax highlighting. If you want to enable it, update the configuration in _config.yml
+This theme use `prismjs` for syntax highlighting. To enable it, update the configuration in _config.yml
 
 ```yaml
 syntax_highlighter: prismjs
