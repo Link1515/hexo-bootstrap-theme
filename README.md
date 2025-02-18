@@ -39,7 +39,7 @@ theme_config:
   post:
     show_cover: true           # show cover in the post
     show_description: true     # show description in the post
-  footer_content: © Copyright 2024   # footer content
+  footer_content: © Copyright 2025   # footer content
 ```
 
 ## Post Front-matter
@@ -71,3 +71,59 @@ prismjs:
   line_threshold: 0
   tab_replace: ''
 ```
+
+### Supported Languages
+
+<table>
+  <tr>
+    <td>ASP.NET</td>
+    <td>Apache</td>
+    <td>Bash</td>
+    <td>C</td>
+    <td>C#</td>
+    <td>C++</td>
+  </tr>
+  <tr>
+    <td>CSS</td>
+    <td>CSV</td>
+    <td>Django</td>
+    <td>Docker</td>
+    <td>EJS</td>
+    <td>Go</td>
+  </tr>
+  <tr>
+    <td>GraphQL</td>
+    <td>HTML</td>
+    <td>Handlebars</td>
+    <td>JSON</td>
+    <td>Java</td>
+    <td>JavaScript</td>
+  </tr>
+  <tr>
+    <td>Kotlin</td>
+    <td>Lua</td>
+    <td>Makefile</td>
+    <td>Nginx</td>
+    <td>Objective-C</td>
+    <td>PHP</td>
+  </tr>
+  <tr>
+    <td>PowerShell</td>
+    <td>Python</td>
+    <td>Ruby</td>
+    <td>Rust</td>
+    <td>SASS/SCSS</td>
+    <td>SQL</td>
+  </tr>
+  <tr>
+    <td>Swift</td>
+    <td>Twig</td>
+    <td>TypeScript</td>
+    <td>YAML</td>
+    <td>cshtml</td>
+    <td>ini</td>
+  </tr>
+  <tr>
+    <td>vim</td>
+  </tr>
+</table>
