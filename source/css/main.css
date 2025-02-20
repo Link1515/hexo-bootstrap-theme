@@ -32,8 +32,18 @@ code {
 
 blockquote {
   border-left: 4px solid var(--bs-gray-500);
-  padding-left: 1rem;
+  padding: 0.75rem 1rem;
   margin: 1rem 0;
+  background-color: var(--bs-gray-100);
+  color: var(--bs-card-color);
+}
+
+blockquote *:last-child {
+  margin-bottom: 0;
+}
+
+[data-bs-theme=dark] blockquote {
+  background-color: var(--bs-gray-800);
 }
 
 a:focus-visible {
