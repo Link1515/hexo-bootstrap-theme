@@ -33,10 +33,17 @@
   </div>
   <% } %>
 
+  <% if (theme.post.show_description) { %>
+    <p class="description mb-5"><%= page.description %></p>
+  <% } %>
+
+  <div id="tableOfContents" class="tableOfContents d-flex flex-column gap-1 align-items-start border px-4 py-3">
+    <h4>目錄</h4>
+  </div>
+
   <div class="content">
-    <% if (theme.post.show_description) { %>
-      <p><%= page.description %></p>
-    <% } %>
     <%- page.content %>
   </div>
 </div>
+
+<script src="<%= url_for('js/partials/post.js') %>"></script>

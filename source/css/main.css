@@ -107,6 +107,20 @@ a:focus-visible {
   letter-spacing: 0.025em;
 }
 
+.post .description {
+  text-align: justify;
+}
+
+.post .tableOfContents {
+  min-width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .post .tableOfContents {
+    width: fit-content;
+  }
+}
+
 .post .content {
   text-align: justify;
 }
