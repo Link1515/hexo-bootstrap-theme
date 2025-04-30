@@ -2,5 +2,5 @@ home: 首頁
 list: 列表
 tags: 標籤
 categories: 分類
-searchNoResult: 查無結果
-tableOfContents: 目錄
+search_no_result: 查無結果
+table_of_contents: 目錄
