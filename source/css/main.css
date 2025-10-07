@@ -15,6 +15,7 @@
 
 :root {
   scroll-padding-top: 84px;
+  font-size: 20px;
 }
 
 .code-toolbar {
@@ -42,7 +43,7 @@ blockquote *:last-child {
   margin-bottom: 0;
 }
 
-[data-bs-theme=dark] blockquote {
+[data-bs-theme='dark'] blockquote {
   background-color: var(--bs-gray-800);
 }
 
